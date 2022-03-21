@@ -20,7 +20,7 @@ public class AudioManager : MonoBehaviour
     }
 
 
-    public void songForward()
+    public void songForward() //Funcion para adelantar las canciones hacia delante
     {
         songIndex++;
 
@@ -34,7 +34,7 @@ public class AudioManager : MonoBehaviour
         changeName();
     }
 
-    public void songBack()
+    public void songBack()//Funcion para adelantar las canciones hacia atras
     {
         songIndex--;
         if (songIndex < 0)
@@ -47,17 +47,17 @@ public class AudioManager : MonoBehaviour
         changeName();
     }
 
-    public void songPause()
+    public void songPause()//Funcion para pausar las canciones
     {
         headPhones.Pause();
     }
 
-    public void songPlay()
+    public void songPlay()//Funcion para iniciar una cancion
     {
         headPhones.Play();
     }
 
-    public void songRandom()
+    public void songRandom()//Funcion para iniciar una cnacion random
     {
         songIndex = Random.Range(0, musicList.Length);
 
@@ -67,7 +67,7 @@ public class AudioManager : MonoBehaviour
         changeName();
     }
 
-    public void changeName()
+    public void changeName()//Funcion para canviar el nombre de la cancion del array y mostrar su nombre
     {
         Name.text = songNames[songIndex];
     }
